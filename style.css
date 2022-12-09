@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: linear-gradient(#0a6ddea8,#d404e3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+.container{
+    width: 90%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 6px 11px rgba(0,0,0,0.5);
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+}
+.container .title::before{
+    content:'';
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(#0a6ddea8,#d404e3);
+    bottom: 0;
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+.user-details .input-box{
+    margin-bottom: 15px;
+    width: 48%;
+}
+.user-details .input-box .details{
+    font-weight: 600;
+    display: block;
+    margin: 0 0 5px 0;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;   
+}
+.user-details .input-box input:focus{
+    border-color: #d404e3;
+    border-bottom-width: 3px;
+    transition: 0.5s;
+}
+.gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.gender-details .category{
+    width: 80%;
+    margin: 14px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.gender-details .category label{
+    display: flex;
+}
+.gender-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: 0.3s;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+    border-color: #d9d9d9;
+    background: #d404e3;
+}
+input[type="radio"]{
+    display: none;
+}
+.button{
+    height: 45px;
+    margin: 45px 0;
+}
+.button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(#0a6ddea8,#d404e3);
+}
+.button input:hover{
+    background: linear-gradient(#d404e3,#0a6ddea8) ;
+}
